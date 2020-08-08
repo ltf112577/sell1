@@ -72,7 +72,7 @@ public class BuyerOrderController {
             throw new SellException(ResultEnum.PARAM_ERROR);
         }
         PageRequest request = PageRequest.of(page, size);
-        Page<OrderDTO> orderDTOPage = orderService.findList(request);
+        Page<OrderDTO> orderDTOPage = orderService.findList(openid,request);
         return ResultVOUtil.success(orderDTOPage.getContent());
 
     }
@@ -89,7 +89,7 @@ public class BuyerOrderController {
     @PostMapping("/cancel")
     public ResultVO<OrderDTO> cancel(@RequestParam("openid") String openid,
                                      @RequestParam("orderId") String orderId) {
-        OrderDTO orderDTO = buyerService.findOrderOne(openid, orderId);
+        buyerService.findOrderOne(openid, orderId);
         return ResultVOUtil.success();
     }
 }
