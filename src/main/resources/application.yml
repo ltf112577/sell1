@@ -3,9 +3,13 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 123456
-    url: jdbc:mysql://192.168.1.123:3306/sell?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://192.168.0.106:3306/sell?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
 server:
   servlet:
     context-path: /sell
+
+wechat:
+  mpAppId: wx6ad144e54af67d87
+  mpAppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
