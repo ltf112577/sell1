@@ -40,9 +40,7 @@ public class BuyerProductController {
         List<ProductInfo> productInfoList = productService.findUpAll();
 
         //2.查询类目（一次性查询）
-        List<Integer> categoryList = productInfoList.stream().
-                map(e -> e.getCategoryType()).
-                collect(Collectors.toList());
+        List<Integer> categoryList = productInfoList.stream().map(e -> e.getCategoryType()).collect(Collectors.toList());
         List<ProductCategory> productCategoryList = categoryService.findByCategoryTypeId(categoryList);
 
         //3.数据拼装
