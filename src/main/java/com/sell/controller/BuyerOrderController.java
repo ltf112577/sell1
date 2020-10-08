@@ -30,7 +30,7 @@ import java.util.Map;
  * @create: 2020-07-27 17:27
  **/
 @RestController
-@RequestMapping("/buyer/order/")
+@RequestMapping("/buyer/order")
 @Slf4j
 public class BuyerOrderController {
 
